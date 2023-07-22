@@ -56,7 +56,6 @@ class RewardsControllerTest {
         long customerId = 123L;
         int year = 2023;
         int month = 7;
-
         LocalDate startDate = LocalDate.of(year, month, 1);
         LocalDate endDate = startDate.plusMonths(1).minusDays(1);
 
