@@ -25,14 +25,11 @@ public class RewardsController {
         transactionRepository.save(transaction);
         return ResponseEntity.ok("Transaction added successfully.");
     }
-
     @GetMapping("/transactions")
     public ResponseEntity<List<Transaction>> getTransaction() {
         List<Transaction> all = transactionRepository.findAll();
         return ResponseEntity.ok(all);
     }
-
-
     @GetMapping("/rewards/{customerId}/{year}/{month}")
     public ResponseEntity<Integer> getRewardsByCustomerIdAndMonth(
             @PathVariable Long customerId,
