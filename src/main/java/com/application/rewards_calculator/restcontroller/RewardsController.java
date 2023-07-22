@@ -32,6 +32,7 @@ public class RewardsController {
         return ResponseEntity.ok(all);
     }
 
+
     @GetMapping("/rewards/{customerId}/{year}/{month}")
     public ResponseEntity<Integer> getRewardsByCustomerIdAndMonth(
             @PathVariable Long customerId,
