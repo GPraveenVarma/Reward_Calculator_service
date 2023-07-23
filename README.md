@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# Reward_Calculator_service
-=======
-
 
 # Postman Curls
 
@@ -32,5 +28,3 @@
 ----
     curl --location 'http://localhost:8050/rewards/123
 ----
-
->>>>>>> c2a40fa (first commit)

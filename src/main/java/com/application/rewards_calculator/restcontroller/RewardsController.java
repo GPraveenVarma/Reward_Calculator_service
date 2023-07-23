@@ -1,6 +1,5 @@
 package com.application.rewards_calculator.restcontroller;
 
-
 import com.application.rewards_calculator.entity.Transaction;
 import com.application.rewards_calculator.repository.TransactionRepository;
 import com.application.rewards_calculator.service.RewardsService;
@@ -12,6 +11,7 @@ import java.util.List;
 
 @RestController
 public class RewardsController {
+
     private final TransactionRepository transactionRepository;
     private final RewardsService rewardsService;
 
