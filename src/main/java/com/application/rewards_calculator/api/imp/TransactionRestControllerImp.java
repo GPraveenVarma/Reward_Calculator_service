@@ -14,7 +14,6 @@ import java.util.List;
 public class TransactionRestControllerImp implements TransactionRestController {
     private TransactionRepository transactionRepository;
 
-
     public TransactionRestControllerImp(TransactionRepository transactionRepository) {
         this.transactionRepository = transactionRepository;
     }
