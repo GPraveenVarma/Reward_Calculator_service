@@ -11,7 +11,7 @@
 
       ## Installation
 
-        1. Clone the repository: `git clone https://github.com/yourusername/project.git`
+        1. Clone the repository: `git clone https://github.com/GPraveenVarma/Reward_Calculator_service.git`
         2. Navigate to the project directory: `cd project`
         3. Install dependencies: `./mvnw clean package`
         4. Run the Application: `./mvnw spring-boot:run`
