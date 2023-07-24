@@ -20,16 +20,16 @@ class RewardsServiceTest {
 
     private static TransactionRepository transactionRepository;
 
-    private static RewardsService rewardsService;
+    private static RewardServiceImp rewardsService;
 
     @BeforeEach
     public void setUp() {
         transactionRepository = mock(TransactionRepository.class);
-        rewardsService = new RewardsService(transactionRepository);
+        rewardsService = new RewardServiceImp(transactionRepository);
     }
 
     @Test
-     void testCalculateRewardPoints() {
+    void testCalculateRewardPoints() {
         double transactionAmount1 = 120.0; // Expected points: 2 * $20 + 1 * $50 = 90
         double transactionAmount2 = 80.0;  // Expected points: 1 * $30 = 30
 
@@ -41,7 +41,7 @@ class RewardsServiceTest {
     }
 
     @Test
-     void testTotalPointsByCustomerId() {
+    void testTotalPointsByCustomerId() {
         long customerId = 123L;
         List<Transaction> transactions = new ArrayList<>();
         transactions.add(new Transaction(1L, customerId, LocalDate.of(2023, 7, 1), 120.0));
@@ -55,7 +55,7 @@ class RewardsServiceTest {
     }
 
     @Test
-     void testTotalPointsByCustomerIdAndDateBetween() {
+    void testTotalPointsByCustomerIdAndDateBetween() {
         long customerId = 123L;
         LocalDate startDate = LocalDate.of(2023, 7, 1);
         LocalDate endDate = LocalDate.of(2023, 7, 31);
