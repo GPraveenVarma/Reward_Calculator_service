@@ -16,7 +16,6 @@ public interface RewardRestController {
             @PathVariable int month
     );
 
-
     /**
      below method handles incoming HTTP GET requests to retrieve the total rewards points earned
      by a specific customer.
