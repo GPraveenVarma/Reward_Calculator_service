@@ -18,6 +18,9 @@ public class RewardServiceImp implements RewardService {
     public RewardServiceImp(TransactionRepository transactionRepository){
         this.transactionRepository = transactionRepository;
     }
+
+    /** Calculates the reward points based on the transaction amount. */
+
     @Override
     public int calculateRewardPoints(double transactionAmount) {
         int points = 0;
@@ -30,6 +33,8 @@ public class RewardServiceImp implements RewardService {
         return points;
     }
 
+    /**  Calculates the total reward points earned by a customer based on their transactions. */
+
     @Override
     public int totalPointsByCustomerId(Long customerId) {
         List<Transaction> transactions = transactionRepository
@@ -39,6 +44,8 @@ public class RewardServiceImp implements RewardService {
                 .map(transaction -> calculateRewardPoints(transaction.getTransactionAmount()))
                 .reduce(0, (subtotal, element) -> subtotal + element);
     }
+
+    /**  Calculates the total reward points earned by a customer between specific dates. */
 
     @Override
     public int totalPointsByCustomerIdAndDateBetween(Long customerId, LocalDate startDate, LocalDate endDate) {

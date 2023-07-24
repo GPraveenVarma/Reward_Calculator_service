@@ -3,7 +3,6 @@ package com.application.rewards_calculator.api.imp;
 import com.application.rewards_calculator.api.TransactionRestController;
 import com.application.rewards_calculator.entity.Transaction;
 import com.application.rewards_calculator.repository.TransactionRepository;
-import com.application.rewards_calculator.service.RewardService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
