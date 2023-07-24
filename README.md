@@ -19,7 +19,7 @@
 ----
       # POST a Transaction
 
-     curl --location 'http://localhost:8050/transactions' \
+     curl --location 'http://localhost:8089/transactions' \
      --header 'Content-Type: application/json' \
      --data '{
      "id":"1",
@@ -31,15 +31,15 @@
 
      # GET All Transactions
 
-    curl --location 'http://localhost:8050/transactions'
+    curl --location 'http://localhost:8089/transactions'
 ----
 
     # GET reward point for customer id 123 in 4 th month of 2022
 
-    curl --location 'http://localhost:8050/rewards/123/2022/4'
+    curl --location 'http://localhost:8089/rewards/123/2022/4'
 ----
 
     # GET all reward points for customer id 123
 
-    curl --location 'http://localhost:8050/rewards/123
+    curl --location 'http://localhost:8089/rewards/123
 ----
